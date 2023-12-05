@@ -9,25 +9,25 @@ The Self-dialogue Corpus is a collection of open-domain self-dialogues in text m
 #### Where you downloaded it from (include the original URL)
 From their GitHub Account, as noted in the Assignment. Original URL: https://github.com/jfainberg/self_dialogue_corpus.git 
 
-• How it was collected
+#### How it was collected
 This paper proposes a novel way to gather domain specific, conversational data in an efficient, cost-saving way: self-dialogues through crowdsourcing. Instead of a standard, two party conversation, self-dialogues are fictitious conversations orchestrated by one person who plays both parts in a dialogue. Using this technique they collected a corpus of approximately 3 million words across 23 topics via Amazon Mechanical Turk, that they make available alongside their paper.
 Specifically, this corpus was collected using Amazon Mechanical Turk (AMT). To harvest self-dialogues, they asked Workers to create a fictitious two-party conversation around a topic. For the majority of the tasks, the Workers were requested to fill 20 text boxes with a conversation on a particular topic. The setup required all 20 text boxes to be completed in order to submit.
 In order to obtain conversations that were as natural as possible, they limited the number of constraints set in the task descriptions. They aimed to present tasks that were simple to execute. The only rejection criteria related to abusing the system, such as submitting (near) duplicate entries or content with exaggerated bad language. To deal with the large amount of submissions, they automated the rejection procedure by 1. comparing the cosine similarity between bags of words of two dialogues and 2. flagging conversations which contained a large number of words from a bad-words list.
 In total only eight out of 2,717 Workers were banned, and 145 conversations (~0,6%) were rejected.
 
-• What kind of dialogue system or dialogue system component it's designed for
+#### What kind of dialogue system or dialogue system component it's designed for
 By design, open-domain conversational agents require the ability to converse about a broad set of topics in a fluid and unconstrained manner while keeping dialogue with the end-user coherent, clear and engaging.
 The intended purpose of the dataset is to train conversational agents. Suitable for open-domain human-bot conversational settings.
 
-• What kind of annotation is present (if any at all), how was it obtained (human/automatic)
+#### What kind of annotation is present (if any at all), how was it obtained (human/automatic)
 Their paper does not refer explicitly to annotation, but through their own words, we can conclude that there is some kind of annotation obtained by humans. Firstly, the dataset is shorted in 23 different topics, so there should be topic labels for them. Also, in their paper, when they discuss the comparison with Open Subtitles they conclude that their corpus is promising for comparisons when name-entities are involved. So, there should also be name-entities annotations.
 They, also, refer to labelling some conversations, such as as “partially” complete. This takes place when prompting two Workers to hold a conversation with one another in order to investigate the differences between their corpus and standard two-party conversations. So, in cases where one Worker is disconnected mid-task, they instruct the remaining Worker to imagine how the conversation would continue and finish their 15 messages accordingly in order for him to receive the payment.
 Throughout the paper there is no reference to sentiment labels or dialogue acts.
 
-• What format is it stored in
+#### What format is it stored in
 The format of the dataset is stored in raw CSVs from Amazon Mechanical Turk, sorted by individual tasks/topics.
 
-• What is the license
+#### What is the license
 Self_dialogue_corpus is licensed under the BSD 3-Clause "New" or "Revised" License. This is a permissive license similar to the BSD 2-Clause License, but with a 3rd clause that prohibits others from using the name of the copyright holder or its contributors to promote derived products without written consent.
 
 Description/paper that came out with the data, used to extract the above info: https://arxiv.org/pdf/1809.06641.pdf  
@@ -38,7 +38,6 @@ a.	there was no clear separation between a user and a system, as it is one human
 b. there was no train/dev/test split.
 So, I will provide the overall numbers.
 
-• Total data length (in terms of dialogues, turns, sentences, words)
 In general, from their README file on their GitHub page, the info says that it is a corpus of 3.6 million words across 23 topics. 
 
 To begin with the measurements asked, firstly I converted all .csv files into .txt files, using the get_data.py that can be found on their README file. It is a preprocessing script that changes format from .csv to .txt and by default saves the created .txt files in a folder called dialogues. But it doesn’t keep the structure of the .csv files (which were all stored in a file named corpus and then in subfiles of different topics). The .txt files are stored all together in a file names dialogues. So, each file is a different dialogue, but we don’t know the category it belongs to.
@@ -46,7 +45,7 @@ Because of that, I later decided to work on the .csv files directly, so as to ge
 
 .CSV FILES
 
-• Total data length (in terms of dialogues, turns, sentences, words)
+#### Total data length (in terms of dialogues, turns, sentences, words)
 
 TOTAL DATA LENGTH Measurememnts (analysis_csv.ipynb)  Paper (GitHub) README (GitHub)
 Total Dialogues		        24.249				   			24.283			24.165
@@ -60,7 +59,7 @@ b.	As for the number of total Turns, my calculations on the .csv file probably f
 c.	The number of total Words is much higher than their own measurements (which this time coincide).
 d.	And finally, as there is no mention of the number of total sentences neither on their paper nor in their README file, we cannot conclude to a comparison.
 
-• Mean/std dev dialogue lengths (in terms of dialogues, turns, sentences, words)
+#### Mean/std dev dialogue lengths (in terms of dialogues, turns, sentences, words)
 The values below provide an insight into the average length and variability/spread of dialogues, turns, sentences, and words within each dialogue across the dataset. They give an indication of  the structure of the typical dialogue and the range of variation/spread in the length of dialogues in terms of dialogues, turns, sentences, and words:
 
 Mean/Std Dev Dialogue Lengths:
@@ -75,11 +74,12 @@ StdDev Dialogue Length (Words): 74.36175345292521
 
 Note that in the analysis_csv.ipynb file there are also results of the mean/std dev dialogue lengths per topic, (which is not included in the report because of their size).
 
-• VOCABULARY SIZE
+#### VOCABULARY SIZE
 The number of all the unique words in the vocabulary of the dataset is 117187 words. 
 
+##### Vocabulary Size Per Topic:
 Below there is the calculation of the vocabulary size per topic: 
-Vocabulary Size Per Topic:
+
 Topic: action, Vocabulary Size: 5932
 Topic: baseball, Vocabulary Size: 10761
 Topic: basketball, Vocabulary Size: 9406
