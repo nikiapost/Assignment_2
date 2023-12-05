@@ -1,20 +1,12 @@
-Διαλογικά Συστήματα και Φωνητικοί Βοηθοί					
-Ν. ΚΑΤΣΑΜΑΝΗΣ						        	   
-
-Assignment_2
-ΑΠΟΣΤΟΛΟΠΟΥΛΟΥ ΝΙΚΗ 
-ΑΜ: 7115182200002
-
-
-1.BASIC INFO:
-• The name of the dataset
+# BASIC INFO:
+#### The name of the dataset
 Edina Self-dialogue. (as noted in the Assignment)
 The Self-dialogue Corpus. (as noted in their GitHub)
 
-• What kind of data it is (domain, modality)
+#### What kind of data it is (domain, modality)
 The Self-dialogue Corpus is a collection of open-domain self-dialogues in text modality, which covers various domains such as entertainment (movies, music), sports and general topics (opinions, favorite things etc.). Specifically, a collection of raw CSVs from Amazon Mechanical Turk, sorted by individual tasks/topics. These topics are about music, movies and sports and subtopics within these.
 
-• Where you downloaded it from (include the original URL)
+#### Where you downloaded it from (include the original URL)
 From their GitHub Account, as noted in the Assignment. Original URL: https://github.com/jfainberg/self_dialogue_corpus.git 
 
 • How it was collected
@@ -29,7 +21,7 @@ The intended purpose of the dataset is to train conversational agents. Suitable 
 
 • What kind of annotation is present (if any at all), how was it obtained (human/automatic)
 Their paper does not refer explicitly to annotation, but through their own words, we can conclude that there is some kind of annotation obtained by humans. Firstly, the dataset is shorted in 23 different topics, so there should be topic labels for them. Also, in their paper, when they discuss the comparison with Open Subtitles they conclude that their corpus is promising for comparisons when name-entities are involved. So, there should also be name-entities annotations.
-They, also, refer to labelling some conversations, such as as “partially” complete. [This takes place when prompting two Workers to hold a conversation with one another in order to investigate the differences between their corpus and standard two-party conversations. So, in cases where one Worker is disconnected mid-task, they instruct the remaining Worker to imagine how the conversation would continue and finish their 15 messages accordingly in order for him to receive the payment.]
+They, also, refer to labelling some conversations, such as as “partially” complete. This takes place when prompting two Workers to hold a conversation with one another in order to investigate the differences between their corpus and standard two-party conversations. So, in cases where one Worker is disconnected mid-task, they instruct the remaining Worker to imagine how the conversation would continue and finish their 15 messages accordingly in order for him to receive the payment.
 Throughout the paper there is no reference to sentiment labels or dialogue acts.
 
 • What format is it stored in
@@ -38,9 +30,9 @@ The format of the dataset is stored in raw CSVs from Amazon Mechanical Turk, sor
 • What is the license
 Self_dialogue_corpus is licensed under the BSD 3-Clause "New" or "Revised" License. This is a permissive license similar to the BSD 2-Clause License, but with a 3rd clause that prohibits others from using the name of the copyright holder or its contributors to promote derived products without written consent.
 
-Description/paper that came out with the data, used to extract the above info: https://arxiv.org/pdf/1809.06641.pdf 
+Description/paper that came out with the data, used to extract the above info: https://arxiv.org/pdf/1809.06641.pdf  
 
-2.MEASUREMENTS
+# MEASUREMENTS
 Firstly, by checking the dataset:
 a.	there was no clear separation between a user and a system, as it is one human making the dialogues for both user and system, and
 b. there was no train/dev/test split.
@@ -112,7 +104,7 @@ Topic: superhero, Vocabulary Size: 5712
 Topic: thriller, Vocabulary Size: 9134
 Topic: transition_music_movies, Vocabulary Size: 1270
 
-3.Impressions
+# Impressions
 After a closer look at the dataset and their paper, where at the end they present unedited self-dialogues from various topics to show the nature of the collected data, my findings agree that the data look extremely natural, and that was the goal as they mention in their paper. Specifically the data appear to be very structured and at the same time maintaining the oral speech in a more informal way. In summary the natural way people talk with each other about a variety of everyday things.
 
 It would be easy for this dataset to learn from, because it is very well structured and cleaned, with no noise that needs removal. Also, as they present in their paper, they’ve made a comparison with other datasets and they had very good results: By comparing self-dialogues with standard two-speaker conversations, they demonstrate the advantages in terms of costs, simplicity, efficiency, and quality of their collected data. The self-dialogues tend to present better coherence and engagement. Also, by comparing their corpus to the one of Open Subtitles they’ve concluded that their corpus is more suitable for open-domain human-bot conversational settings.
