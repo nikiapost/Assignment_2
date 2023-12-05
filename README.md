@@ -47,11 +47,12 @@ Because of that, I later decided to work on the .csv files directly, so as to ge
 
 #### Total data length (in terms of dialogues, turns, sentences, words)
 
-TOTAL DATA LENGTH Measurememnts (analysis_csv.ipynb)  Paper (GitHub) README (GitHub)
-Total Dialogues		        24.249				   			24.283			24.165
-Total Turns		            1.455			  				141.945				-
-Total Sentences		        958.803							-				    -
-Total Words		            5.694.981			   			3.653.313		3.653.313
+| TOTAL DATA LENGTH | Measurememnts (analysis_csv.ipynb) | Paper (GitHub) | README (GitHub) |
+|-------------------|------------------------------------|----------------|---------------- |
+| Total Dialogues	  |       24.249				   			       |       24.283		|	24.165          |
+| Total Turns		    |        1.455			  				       |      141.945		|  		-           |
+| Total Sentences	  |	     958.803							         |         -			|	    -           |
+| Total Words		    |    5.694.981			   			         |    3.653.313		|3.653.313        |
 
 As we can observe there are some differences:
 a.	About the number of the total Dialogues, the .csv measurements shows a small differantiation in regards to their own measurements. Of course, those as we can see, are different on their paper on GitHub and on their README on GitHub!
@@ -62,15 +63,16 @@ d.	And finally, as there is no mention of the number of total sentences neither 
 #### Mean/std dev dialogue lengths (in terms of dialogues, turns, sentences, words)
 The values below provide an insight into the average length and variability/spread of dialogues, turns, sentences, and words within each dialogue across the dataset. They give an indication of  the structure of the typical dialogue and the range of variation/spread in the length of dialogues in terms of dialogues, turns, sentences, and words:
 
-Mean/Std Dev Dialogue Lengths:
-Mean Dialogue Length (Dialogues): 384.9047619047619
-StdDev Dialogue Length (Dialogues): 258.1223233020501
-Mean Dialogue Length (Turns): 22.740154233164255
-StdDev Dialogue Length (Turns): 2.546752108033262
-Mean Dialogue Length (Sentences): 39.53989855251763
-StdDev Dialogue Length (Sentences): 5.128629772166213
-Mean Dialogue Length (Words): 234.85426203142399
-StdDev Dialogue Length (Words): 74.36175345292521
+| Mean/Std Dev Dialogue Lengths     |                    |
+|-----------------------------------|--------------------|
+| Mean Dialogue Length (Dialogues)  | 384.9047619047619  |
+| StdDev Dialogue Length (Dialogues)| 258.1223233020501  |
+| Mean Dialogue Length (Turns)      | 22.740154233164255 |
+| StdDev Dialogue Length (Turns)    | 2.546752108033262  |
+| Mean Dialogue Length (Sentences)  | 39.53989855251763  |
+| StdDev Dialogue Length (Sentences)| 5.128629772166213  |
+| Mean Dialogue Length (Words)      | 234.85426203142399 |
+| StdDev Dialogue Length (Words)    | 74.36175345292521  |
 
 Note that in the analysis_csv.ipynb file there are also results of the mean/std dev dialogue lengths per topic, (which is not included in the report because of their size).
 
@@ -80,29 +82,31 @@ The number of all the unique words in the vocabulary of the dataset is 117187 wo
 ##### Vocabulary Size Per Topic:
 Below there is the calculation of the vocabulary size per topic: 
 
-Topic: action, Vocabulary Size: 5932
-Topic: baseball, Vocabulary Size: 10761
-Topic: basketball, Vocabulary Size: 9406
-Topic: beatles, Vocabulary Size: 7554
-Topic: comedy, Vocabulary Size: 5647
-Topic: disney, Vocabulary Size: 17097
-Topic: fashion, Vocabulary Size: 6761
-Topic: fast_furious, Vocabulary Size: 4321
-Topic: harry_potter, Vocabulary Size: 5750
-Topic: horror, Vocabulary Size: 6310
-Topic: icehockey, Vocabulary Size: 4882
-Topic: lady_gaga, Vocabulary Size: 5773
-Topic: movies, Vocabulary Size: 44744
-Topic: music, Vocabulary Size: 49886
-Topic: music_and_movies, Vocabulary Size: 6314
-Topic: nfl_football, Vocabulary Size: 28460
-Topic: pop, Vocabulary Size: 7839
-Topic: rap_hiphop, Vocabulary Size: 8427
-Topic: rock, Vocabulary Size: 8317
-Topic: star_wars, Vocabulary Size: 14013
-Topic: superhero, Vocabulary Size: 5712
-Topic: thriller, Vocabulary Size: 9134
-Topic: transition_music_movies, Vocabulary Size: 1270
+| TOPIC                   | VOCABULARY SIZE |
+|-------------------------|-----------------|
+| action                  | 5932            | 
+| baseball                | 10761           |
+| basketball              | 9406            |
+| beatles                 | 7554            |
+| comedy                  | 5647            |
+| disney                  | 17097           |
+| fashion                 | 6761            |
+| fast_furious            | 4321            |
+| harry_potter            | 5750            |
+| horror                  | 6310            |
+| icehockey               | 4882            |
+| lady_gaga               | 5773            |
+| movies                  | 44744           |
+| music                   | 49886           | 
+| music_and_movies        | 6314            |
+| nfl_football            | 28460           |
+| pop                     | 7839            |
+| rap_hiphop              | 8427            |
+| rock                    | 8317            |
+| star_wars               | 14013           |
+| superhero               | 5712            |
+| thriller                | 9134            |
+| transition_music_movies | 1270            |
 
 # Impressions
 After a closer look at the dataset and their paper, where at the end they present unedited self-dialogues from various topics to show the nature of the collected data, my findings agree that the data look extremely natural, and that was the goal as they mention in their paper. Specifically the data appear to be very structured and at the same time maintaining the oral speech in a more informal way. In summary the natural way people talk with each other about a variety of everyday things.
